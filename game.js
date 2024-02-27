@@ -102,7 +102,7 @@ function showQuestion() {
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]]; // ES6 destructuring assignment syntax for swapping elements
+    [array[i], array[j]] = [array[j], array[i]];
   }
 }
 function checkAnswer() {
@@ -201,7 +201,7 @@ document.getElementById("hint-button").addEventListener("click", function () {
 
     setTimeout(function () {
       hintContainer.style.visibility = "hidden";
-    }, 5000); // Hide the hint after 5 seconds
+    }, 5000);
   } else {
     document.getElementById("feedback").textContent = "No more hints!";
   }

@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
 function displayScores() {
   let scores = JSON.parse(localStorage.getItem("scores")) || [];
   const scoreTableBody = document.querySelector("#score-table tbody");
-  scoreTableBody.innerHTML = ""; // Mevcut içeriği temizle
+  scoreTableBody.innerHTML = "";
 
-  // Skorları tabloya ekle
+  // Skorları tabloya eklıyor bu
   scores.forEach((score, index) => {
     const row = scoreTableBody.insertRow();
     const cellRank = row.insertCell();

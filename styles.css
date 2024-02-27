@@ -89,17 +89,17 @@ table {
   tr:nth-child(even){background-color: #f9f9f9;}
   
 .back-button {
-    display: flex; /* Flexbox ile içerikleri yatay olarak hizalayın */
+    display: flex; 
   align-items: center; 
-    position: absolute; /* Pozisyonu mutlak yaparak, konumlandırabiliriz */
-    top: 20px; /* Üstten 20 piksel */
-    left: 20px; /* Soldan 20 piksel */
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
     background: #e35d2d;
     color: #fff;
     padding: 12px;
-    font-size: 40px; /* 'size' değil, 'font-size' kullanmalısınız */
+    font-size: 40px; 
     border-radius: 12px;
-    cursor: pointer; /* İmlecin tıklanabilir olduğunu gösterir */
+    cursor: pointer;
   }
 .game-container {
     width: 100%;
