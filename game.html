@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Javascript Adventure Game</title>
+    <title>Javascript Adventure Game - Scores</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <!-- Buraya da header koydum ki maksat sayfalar arası geçiş olsun -->
     <header>
-      <h1>Welcome to Javascript Adventure Game Page</h1>
+      <h1>Welcome to Javascript Adventure Game</h1>
       <nav>
-          <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="game.html">Game</a></li>
-              <li><a href="resources.html">Resources</a></li>
-              <li><a href="scores.html">Scores</a></li>
-              <li><a href="help.html">Help</a></li>
-          </ul>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="game.html">Game</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="scores.html">Scores</a></li>
+          <li><a href="help.html">Help</a></li>
+        </ul>
       </nav>
-  </header>
+    </header>
     <main>
       <div id="game-container">
-        <div id="question-area" style="margin-bottom: 12px" >
-            <div id="question" style="display: inline-block;"></div>
-            <button id="hint-button">?</button>
+        <div id="question-area" style="margin-bottom: 12px">
+          <div id="question" style="display: inline-block"></div>
+          <span id="score" style="margin-left: 10px; font-weight: bold"></span>
+          <button id="hint-button">?</button>
         </div>
         <div class="answer-feedback-area">
-          <input type="text" id="answer"style="margin-bottom: 12px" />
+          <input type="text" id="answer" style="margin-bottom: 12px" />
           <button id="submit-answer" style="margin-bottom: 12px">Answer</button>
           <div id="feedback"></div>
         </div>
       </div>
     </main>
     <footer>
-      <!-- Footer koyabılırz keyfı bıze kalmıs -->
+      <p>&copy; 2024 Javascript Adventure</p>
     </footer>
     <script src="game.js"></script>
   </body>

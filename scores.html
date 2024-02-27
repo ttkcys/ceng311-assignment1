@@ -1,23 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Adventure Scores</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
+<html>
+  <head>
+    <title>Javascript Adventure Game - Scores</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <h1>bWelcome to Javascript Adventure Scores Page</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="game.html">Game</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="scores.html">Scores</a></li>
-                <li><a href="help.html">Help</a></li>
-            </ul>
-        </nav>
+      <h1>Top 10 Scores</h1>
     </header>
-</body>
+    <main>
+      <table id="score-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Skorlar JavaScript ile buraya eklenecek -->
+        </tbody>
+      </table>
+
+      <div class="back-button">
+        <a
+          href="index.html"
+          style="
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+          "
+        >
+          <i class="material-icons">arrow_back</i>
+          <span style="font-size: 16px; margin-left: 8px">Back</span>
+        </a>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 Javascript Adventure</p>
+    </footer>
+    <script src="scores.js"></script>
+  </body>
 </html>

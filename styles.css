@@ -71,7 +71,36 @@ main {
     align-items: center;
     justify-content: center; 
 }
-
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(even){background-color: #f9f9f9;}
+  
+.back-button {
+    display: flex; /* Flexbox ile içerikleri yatay olarak hizalayın */
+  align-items: center; 
+    position: absolute; /* Pozisyonu mutlak yaparak, konumlandırabiliriz */
+    top: 20px; /* Üstten 20 piksel */
+    left: 20px; /* Soldan 20 piksel */
+    background: #e35d2d;
+    color: #fff;
+    padding: 12px;
+    font-size: 40px; /* 'size' değil, 'font-size' kullanmalısınız */
+    border-radius: 12px;
+    cursor: pointer; /* İmlecin tıklanabilir olduğunu gösterir */
+  }
 .game-container {
     width: 100%;
     max-width: 600px; 
