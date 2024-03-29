@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript Adventure - Game Page</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Javascript Quiz Game</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../scores/scores.html">Scores</a></li>
+          <li><a href="../about/about.html">About Us</a></li>
+          <li><a href="../help/help.html">Help</a></li>
+          <li><a href="../login/login_register.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="game-container">
+        <div id="question-area" style="margin-bottom: 12px">
+          <div id="question" style="display: inline-block"></div>
+          <span id="score" style="margin-left: 10px; font-weight: bold"></span>
+          <button id="hint-button">?</button>
+        </div>
+        <div class="answer-feedback-area">
+          <input type="text" id="answer" style="margin-bottom: 12px" />
+          <button id="submit-answer" style="margin-bottom: 12px">Answer</button>
+          <div id="feedback"></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 Javascript Adventure</p>
+    </footer>
+    <script src="../game/game.js"></script>
+  </body>
+</html>
