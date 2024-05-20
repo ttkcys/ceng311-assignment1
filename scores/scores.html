@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Javascript Adventure - Scores Page</title>
-    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <link rel="stylesheet" type="text/css" href="scores.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -13,16 +13,30 @@
       <h1>Welcome to Javascript Quiz Game</h1>
       <nav>
         <ul>
-          ul>
-            <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html">Home</a></li>
             <li><a href="../about/about.html">About Us</a></li>
             <li><a href="../help/help.html">Help</a></li>
+            <li><a href="../contact/contact.html">Contact Us</a></li>
+            <li><a href="../rate/rate_us.html">Rate Us</a></li>
             <li><a href="../login/login_register.html">Login</a></li>
-          </ul>
         </ul>
       </nav>
     </header>
     <main>
+      <div class="back-button">
+        <a
+          href="../index.html"
+          style="
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+          "
+        >
+          <i class="material-icons">arrow_back</i>
+          <span style="font-size: 16px; margin-left: 1em">Back</span>
+        </a>
+      </div>
       <table id="score-table">
         <thead>
           <tr>
@@ -36,24 +50,12 @@
         </tbody>
       </table>
 
-      <div class="back-button">
-        <a
-          href="../index.html"
-          style="
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: inherit;
-          "
-        >
-          <i class="material-icons">arrow_back</i>
-          <span style="font-size: 16px; margin-left: 8px">Back</span>
-        </a>
-      </div>
+      
     </main>
+    <script src="scores.js"></script>
     <footer>
       <p>&copy; 2024 Javascript Adventure</p>
     </footer>
-    <script src="scores.js"></script>
+    
   </body>
 </html>
