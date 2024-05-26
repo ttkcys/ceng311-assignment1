@@ -6,9 +6,11 @@ $(document).ready(function () {
         event.preventDefault(); 
         modal.style.display = "block"; 
     });
+
     span.onclick = function () {
         modal.style.display = "none";
     }
+
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -17,7 +19,14 @@ $(document).ready(function () {
 
     $("#date").datepicker({
         changeMonth: true,
-        changeYear: true
+        changeYear: true,
+        showOn: "button",
+        buttonImageOnly: true,
+        buttonText: "Select date"
+    });
+
+    $("#calendar-icon").click(function () {
+        $("#date").datepicker("show");
     });
 
     $("#dialog").dialog({

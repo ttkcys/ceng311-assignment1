@@ -1,0 +1,23 @@
+{
+    "profiles": [
+      {
+        "id": "yusuf",
+        "firstName": "Yusufhan",
+        "lastName": "Keleş",
+        "headline": "Jr. Mobile Developer",
+        "location": "Ankara, Turkey",
+        "linkedin": "https://www.linkedin.com/in/yusufhankeles/",
+        "profilePicture": "yusuf.jpg"
+      },
+      {
+        "id": "kerem",
+        "firstName": "Kerem",
+        "lastName": "Batu",
+        "headline": "Full Stack Developer",
+        "location": "Ankara, Turkey",
+        "linkedin": "https://www.linkedin.com/in/batukerem/",
+        "profilePicture": "kerem.jpg"
+      }
+    ]
+  }
+  

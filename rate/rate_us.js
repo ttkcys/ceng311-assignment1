@@ -12,6 +12,7 @@ $(document).ready(function() {
 
     $('#rating-area .fas').on('click', function() {
         ratedIndex = parseInt($(this).data('index'));
+        setStars(ratedIndex);
         $('#myModal').fadeIn();
     });
 
@@ -28,4 +29,10 @@ $(document).ready(function() {
     $('.close').click(function() {
         $('#myModal').fadeOut();
     });
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            $('#myModal').fadeOut();
+        }
+    }
 });

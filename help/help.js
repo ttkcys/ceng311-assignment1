@@ -1,20 +1,16 @@
-function toggleSection(sectionId) {
-    var section = document.getElementById(sectionId);
-    var allPanels = document.getElementsByClassName('panel');
-    var allAccordions = document.getElementsByClassName('accordion');
-
-    for (var i = 0; i < allPanels.length; i++) {
-        if (allPanels[i].id !== sectionId) {
-            allPanels[i].style.maxHeight = null;
-            allAccordions[i].classList.remove('active');
-        }
-    }
-
-    if (section.style.maxHeight) {
-        section.style.maxHeight = null;
-        section.previousElementSibling.classList.remove('active');
+function toggleSection(id) {
+    const panel = document.getElementById(id);
+    const acc = panel.previousElementSibling;
+    
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+      acc.classList.remove('active');
     } else {
-        section.style.maxHeight = section.scrollHeight + "px";
-        section.previousElementSibling.classList.add('active');
+      document.querySelectorAll('.panel').forEach(p => p.style.maxHeight = null);
+      document.querySelectorAll('.accordion').forEach(a => a.classList.remove('active'));
+      
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      acc.classList.add('active');
     }
-}
+  }
+  

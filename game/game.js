@@ -83,28 +83,32 @@ const questions = [
 let currentQuestion = 0;
 let currentScore = 0;
 let username = "";
-let score = 0;
 
 window.onload = function () {
-  username = prompt("Please enter your username to start the game:");
-  if (!username) {
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  if (currentUser) {
+    username = currentUser.username;
+  } else {
     username = "Anonymous";
   }
   shuffleArray(questions);
   showQuestion();
 };
+
 function showQuestion() {
   const questionContainer = document.getElementById("question");
   const scoreContainer = document.getElementById("score");
   questionContainer.textContent = questions[currentQuestion].question;
-  scoreContainer.textContent = `Score: ${questions[currentQuestion].score}`;
+  scoreContainer.textContent = `Score: ${currentScore}`;
 }
+
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
+
 function checkAnswer() {
   const userAnswer = document.getElementById("answer").value;
   const feedback = document.getElementById("feedback");
@@ -118,34 +122,35 @@ function checkAnswer() {
       showQuestion();
     } else {
       feedback.textContent = "Congratulations! You have completed the game!";
+      addScore(username, currentScore);
       window.location.href = "scores.html";
     }
   } else {
     feedback.textContent = "Wrong! Please try again.";
     feedback.style.color = "red";
     addScore(username, currentScore);
-
-    window.location.href = "scores.html";
+    window.location.href = "../scores/scores.html";
   }
   document.getElementById("answer").value = "";
 }
+
 function addScore(name, score) {
   let scores = JSON.parse(localStorage.getItem("scores")) || [];
-  scores.push({ name: name, score: score });
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+  scores.push({ name: name, score: score, level: currentUser.level });
   scores.sort((a, b) => b.score - a.score);
   scores = scores.slice(0, 10);
   localStorage.setItem("scores", JSON.stringify(scores));
 }
 
+
+
 document.getElementById("submit-answer").addEventListener("click", checkAnswer);
+
 function updateLocalStorageScore(newScore) {
   localStorage.setItem("currentScore", newScore);
 }
-
-localStorage.setItem("username", username);
-
-// Oyunu başlatmak için ilk soruyu gösteriyoruz.
-showQuestion();
 
 const hints = [
   {

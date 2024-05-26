@@ -1,48 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javascript Adventure - About Us Page</title>
-    <link rel="stylesheet" href="../styles.css">
-  </head>
-  <body>
-    <header>
-      <h1>Welcome to Javascript Quiz Game</h1>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="../help/help.html">Help</a></li>
-          <li><a href="../contact/contact.html">Contact Us</a></li>
-          <li><a href="../rate/rate_us.html">Rate Us</a></li>
-          <li><a href="../login/login_register.html">Login</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <div id="team" class="main">
-        <div class="team-member">
-          <img src="yusuf.jpg" alt="Yusufhan Keleş" class="profile-pic" />
-          <h2>Yusufhan Keleş</h2>
-          <p>
-            I'm Yusufhan Keleş. Here is my <a href="https://www.linkedin.com/in/yusufhankeles/">Linkedin Profile</a>.
-          </p>
-          <p>You can search about me.</p>
-        </div>
-  
-        <div class="team-member">
-          <img src="kerem.jpg" alt="Kerem Batu" class="profile-pic" />
-          <h2>Kerem Batu</h2>
-          <p>
-            I'm Kerem Batu. Here is my <a href="https://www.linkedin.com/in/batukerem/">Linkedin Profile</a>.
-          </p>
-          <p>You can search about me.</p>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Javascript Adventure - About Us Page</title>
+  <link rel="stylesheet" href="about.css" />
+  <script src="about.js" defer></script>
+  <script src="../widgets/headers/loadHeader.js" defer></script>
+</head>
+<body>
+  <header>
+  </header>
+  <main>
+    <div id="team" class="main">
+      <div class="team-member" id="yusuf">
+        <p>Loading...</p>
       </div>
-    </main>
-    <footer>
-      <p>&copy; 2024 Javascript Adventure</p>
-    </footer>
-  </body>
+      <div class="team-member" id="kerem">
+        <p>Loading...</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Javascript Adventure</p>
+  </footer>
+</body>
 </html>

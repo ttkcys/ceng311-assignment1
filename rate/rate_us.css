@@ -4,81 +4,73 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: flex-start; 
-    flex-direction: column; 
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    width: 100%;
-    background-color: #333;
+    background-color: #4CAF50;
     color: white;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    padding: 10px 20px;
-    z-index: 1000; 
-    display: flex; 
-    justify-content: space-between;
-    align-items: center; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
+h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 2.5rem;
 }
 
-header nav {
-    margin: 0;
-}
-
-
-
-header nav ul {
-    list-style: none;
-    padding: 0;
+main {
+    flex: 1;
     display: flex;
-    margin-top: 3em;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
-
-header nav ul li {
-    margin: 0 10px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 1cm;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-
 
 .rating-form {
     background: white;
-    padding: 20px;
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-top: 350px;
-    margin-left: 550px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.rating-form h2 {
+    margin-bottom: 1rem;
 }
 
 #rating-area {
     color: #ccc;
-    font-size: 40px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#rating-area .fas {
+    cursor: pointer;
 }
 
 #rating-area .fas:hover,
 #rating-area .fas.hover,
 #rating-area .fas.active {
-    cursor: pointer;
     color: #f90;
+}
+
+#submit-rating {
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#submit-rating:hover {
+    background-color: #0056b3;
 }
 
 .modal {
@@ -99,6 +91,7 @@ header nav ul li a:hover {
     border: 1px solid #888;
     width: 40%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .close {
@@ -113,4 +106,13 @@ header nav ul li a:hover {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    width: 100%;
 }
